@@ -1,4 +1,30 @@
 // Created by Luis Müdder | github.com/luismudder
+module.exports={
+	Create:(rows=undefined, cols=undefined)=>{
+		if(rows==undefined||cols==undefined){
+			return(-3);
+		}else{return(new Matrices(rows,cols));};},
+	Sum:(a=undefined, b=undefined)=>{
+		if(a==undefined||b==undefined){
+			return(-3);
+		}else{return(Matrices.sum(a,b));};},
+	Subtration:(a=undefined, b=undefined)=>{
+		if(a==undefined||b==undefined){
+			return(-3);
+		}else{return(Matrices.subtration(a,b));};},
+	Multiply:(a=undefined, b=undefined)=>{
+		if(a==undefined||b==undefined){
+			return(-3);
+		}else{return(Matrices.multiply(a,b));};},
+	Hadamard:(a=undefined, b=undefined)=>{
+		if(a==undefined||b==undefined){
+			return(-3);
+		}else{return(Matrices.hadamard(a,b));return(-3);};},
+	Transpose:(a=undefined)=>{
+		if(a==undefined){
+			return(-3);
+		}else{return(Matrices.transpose(a));return(-3);};}
+};
 class Matrices{
 	constructor(rows,cols){
 		this.Matrix=new Array();
