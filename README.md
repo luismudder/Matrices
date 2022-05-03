@@ -1,7 +1,13 @@
 # Matrices
-Class in js than make operations with Matrices, oparations like: transpose, subtration, sum, multiply, hadamard products.
+nodejs module than make operations with Matrices, oparations like: transpose, subtration, sum, multiply, hadamard products.
 >Perfect for FeedForward(Neural Network)
->
+
+**news:**
+
+  >Matrices.js now is a nodejs module;
+  
+  >new exception(read in Exceptions);
+
 **Functions:**
 
 * Matrices()
@@ -42,3 +48,5 @@ Class in js than make operations with Matrices, oparations like: transpose, subt
   >Return -1 | Matrices don't have requirements for operation;
 
   >Return -2 | Matrices or Matrix is corrupted;
+
+  >Return -3 | Lack of Arguments;
