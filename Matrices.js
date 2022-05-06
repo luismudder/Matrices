@@ -19,11 +19,11 @@ module.exports={
 	Hadamard:(a=undefined, b=undefined)=>{
 		if(a==undefined||b==undefined){
 			return(-3);
-		}else{return(Matrices.hadamard(a,b));return(-3);};},
+		}else{return(Matrices.hadamard(a,b));};},
 	Transpose:(a=undefined)=>{
 		if(a==undefined){
 			return(-3);
-		}else{return(Matrices.transpose(a));return(-3);};}
+		}else{return(Matrices.transpose(a));};}
 };
 class Matrices{
 	constructor(rows,cols){
