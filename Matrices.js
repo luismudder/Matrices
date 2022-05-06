@@ -80,4 +80,10 @@ class Matrices{
 							parseInt(a.Matrix[row][col])-parseInt(b.Matrix[row][col]);};};
 				return(response);
 			}catch(err){return(-2);};
-		}else{return(-1);};};};
+		}else{return(-1);};
+	};
+	Value(rows,cols,value){
+		if(typeof(value)===`number`){
+			try{this.Matrix[rows][cols]=value;
+			}catch(err){return(-2)};
+		}else{return(-1)};};};
