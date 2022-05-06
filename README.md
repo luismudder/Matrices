@@ -2,7 +2,7 @@
 nodejs module than make operations with Matrices, oparations like: transpose, subtration, sum, multiply, hadamard products.
 >Perfect for FeedForward(Neural Network)
 
-**news:**
+**News:**
 
   >Matrices.js now is a nodejs module;
   
@@ -10,33 +10,33 @@ nodejs module than make operations with Matrices, oparations like: transpose, su
 
 **Functions:**
 
-* Matrices()
+* Create()
   >Return object with matrix and your dimensions;
   
   >Arguments: rows, cols;
-* Matrices.sum()
+* Sum()
   >Return sum between matrices 'a' and 'b';
   
   >Arguments: a, b;
   
   >The matrices require equal dimensions;
-* Matrices.hadamard()
+* Hadamard()
   >Return products hadamard between matrices 'a' and 'b';
   
   >Arguments: a, b;
   
   >The matrices require equal dimensions;
-* Matrices.multiply()
+* Multiply()
   >Return multiply between matrices 'a' and 'b';
   
   >Arguments: rows, cols;
 
   >The matrix 'b' require rows equal cols of matrix 'a';
-* Matrices.transpose()
+* Transpose()
   >transpose matrix;
   
   >Arguments: a;
-* Matrices.subtration()
+* Subtration()
   >Return subtration between matrices 'a' and 'b';
   
   >Arguments: a, b;
