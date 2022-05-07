@@ -5,9 +5,11 @@ nodejs module than make operations with Matrices, oparations like: transpose, su
 **News:**
   >Matrices.js now is a nodejs module;
 
-  > Function Value(not static);
+  > Function setValue(don't static);
   
-  >new exception(read in Exceptions);
+  > Function getValue(don't static);
+
+  > Function Escalar(static);
 
 **Functions:**
 
@@ -18,7 +20,7 @@ nodejs module than make operations with Matrices, oparations like: transpose, su
 ```js
 // Create() example
 // Import module
-const Matrices = require("./Matrices.js");
+const Matrices = require("./Matrices");
 
 // Dimensions
 const rows = 3;
@@ -27,25 +29,29 @@ const cols = 2;
 // Create matrix
 const Matrix = Matrices.Create(rows, cols);
 
-// result
+// return this object:
 
 // Matrices {
-//  Matrix: [ [ [], [] ], [ [], [] ], [ [], [] ] ],
+//  Matrix: [ 
+//    [ 0, 0 ],
+//    [ 0, 0 ],
+//    [ 0, 0 ] 
+//  ],
 //  rows: 3,
 //  cols: 2
 // }
 
 ```
-* Value()
+* setValue()
   >Charge value in the Matrix;
 
   >Arguments: row, col, value;
 
-  >argument 'value' is number;
+  >argument 'value' is number or "all"(string);
 ```js
-// Value() example
+// setValue() example
 // Import module
-const Matrices = require("./Matrices.js");
+const Matrices = require("./Matrices");
 
 // Dimensions
 const rows = 2;
@@ -55,14 +61,14 @@ const cols = 2;
 const Matrix = Matrices.Create(rows, cols);
 
 // New value
-const value = 123;
+const newValue = 123;
 
 // local
 const row = 1;
 const col = 2;
 
 // Set value in row 1(in array is 0) and col 2(in array is 1)
-Matrix.Value(1, 2, value);
+Matrix.setValue(1, 2, newValue);
 
 ```
 * Sum()
@@ -74,7 +80,7 @@ Matrix.Value(1, 2, value);
 ```js
 // Sum example
 // Import module
-const Matrices = require("./Matrices.js");
+const Matrices = require("./Matrices");
 
 // Dimensions
 const rows = 2;
@@ -98,7 +104,7 @@ const result = Matrices.Sum(Matrix_1, Matrix_2);
 ```js
 // Hadamard() example
 // Import module
-const Matrices = require("./Matrices.js");
+const Matrices = require("./Matrices");
 
 // Dimensions
 const rows = 2;
@@ -122,14 +128,14 @@ const result = Matrices.Hadamard(Matrix_1, Matrix_2);
 ```js
 // Multiply() example
 // Import module
-const Matrices = require("./Matrices.js");
+const Matrices = require("./Matrices");
 
 // Dimensions
 const rows = 2;
 const cols = 2;
 
 // Create matrices
-// matrices must be the same size
+// matrix cols from 'a' equal rows from matrix 'b'
 const Matrix_1 = Matrices.Create(rows, cols);
 const Matrix_2 = Matrices.Create(rows, cols);
 
@@ -144,7 +150,7 @@ const result = Matrices.Multiply(Matrix_1, Matrix_2);
 ```js
 // Transpose() example
 // Import module
-const Matrices = require("./Matrices.js");
+const Matrices = require("./Matrices");
 
 // Dimensions
 const rows = 2;
@@ -166,7 +172,7 @@ const transposed = Matrices.Transpose(Matrix_1, Matrix_2);
 ```js
 // Subtration() example
 // Import module
-const Matrices = require("./Matrices.js");
+const Matrices = require("./Matrices");
 
 // Dimensions
 const rows = 2;
@@ -181,6 +187,40 @@ const Matrix_2 = Matrices.Create(rows, cols);
 const result = Matrices.Subtration(Matrix_1, Matrix_2);
 
 ```
+* getValue()
+  > return value from matrix;
+
+  > arguments: row, col;
+```js
+// getValue() example
+// Import module
+const Matrices = require("./Matrices");
+
+// Dimensions
+const rows = 2;
+const cols = 2;
+
+// Create matrix
+const Matrix = Matrices.Create(rows, cols);
+
+// New value
+const newValue = 123;
+
+// local
+const row = 1;
+const col = 2;
+
+// Set value in row 1(in array is 0) and col 2(in array is 1)
+Matrix.setValue(1, 2, newValue);
+
+// get value
+
+const value = Matrix.getValue(row, col);
+
+```
+* Escalar()
+  >complete, but don't have a description or examples(for the time being)
+
 ***Exceptions:***
 
   >Return -1 | Matrices don't have requirements for operation;
