@@ -65,8 +65,8 @@ const Matrix = Matrices.Create(rows, cols);
 const newValue = 123;
 
 // local
-const row = 1;
-const col = 2;
+const row = 0;
+const col = 1;
 
 // Set value in row 1(in array is 0) and col 2(in array is 1)
 Matrix.setValue(1, 2, newValue);
@@ -208,8 +208,8 @@ const Matrix = Matrices.Create(rows, cols);
 const newValue = 123;
 
 // local
-const row = 1;
-const col = 2;
+const row = 0;
+const col = 1;
 
 // Set value in row 1(in array is 0) and col 2(in array is 1)
 Matrix.setValue(1, 2, newValue);
