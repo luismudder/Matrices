@@ -47,7 +47,8 @@ const Matrix = Matrices.Create(rows, cols);
 
   >Arguments: row, col, value;
 
-  >argument 'value' is number or "all"(string);
+  >argument 'value' is number;
+  >'rol' and 'col' is number or 'all'(string);
 ```js
 // setValue() example
 // Import module
